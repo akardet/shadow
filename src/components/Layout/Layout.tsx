@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 import styles from './Layout.module.scss';
 
 export const siteTitle = 'Joblytics';
@@ -21,7 +22,7 @@ export const Layout = ({ children }: LayoutProps) => (
       <nav>
         <ul>
           <li>
-            <a>Nav 2</a>
+            <Link href="/">Home</Link>
           </li>
         </ul>
       </nav>

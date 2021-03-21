@@ -1,6 +1,5 @@
 import Head from 'next/head';
-import { Layout, siteTitle } from '../components/Layout';
-// import styles from '../styles/Home.module.css';
+import { Layout, siteTitle } from 'components/Layout';
 
 export default function Home() {
   return (
@@ -9,7 +8,7 @@ export default function Home() {
         <title>{siteTitle}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <h1>{'Hello Sam'}</h1>
+      <p>{'Hello Sam'}</p>
     </Layout>
   );
 }

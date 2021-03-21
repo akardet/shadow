@@ -1,0 +1,7 @@
+$type-scale: 1.25;
+$base-size: 1.6rem;
+$p: calc(#{$base-size});
+$h4: calc(#{$p} * #{$type-scale});
+$h3: calc(#{$h4} * #{$type-scale});
+$h2: calc(#{$h3} * #{$type-scale});
+$h1: calc(#{$h2} * #{$type-scale});
