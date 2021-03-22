@@ -19,11 +19,6 @@
     line-height: 4.1rem;
   }
 
-  &__right {
-    display: flex;
-    justify-content: flex-end;
-  }
-
   &__left {
     height: 38rem;
     position: relative;
@@ -63,7 +58,7 @@
 
   @media #{$sm-device} {
     grid-template-columns: unset;
-    grid-template-rows: 40rem 1fr;
+    grid-template-rows: 52rem 1fr;
     margin-top: 0;
 
     &__right {

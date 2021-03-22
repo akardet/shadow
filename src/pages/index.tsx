@@ -29,8 +29,8 @@ export default function Home() {
             className={styles['hero__image']}
             width={400}
             height={400}
-            src={'/images/shayaan.jpeg'}
-            alt={'shayaan'}
+            src={'/images/dog.jpg'}
+            alt={'black french bulldog looking into the camera'}
           />
         </div>
       </section>
