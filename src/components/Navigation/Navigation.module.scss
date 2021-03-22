@@ -1,2 +1,62 @@
-
 @import 'styles/variables';
+
+.nav {
+  display: grid;
+  // grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: min-content 1fr;
+  align-items: center;
+  max-width: 120rem;
+  padding: 2rem;
+  letter-spacing: 0.5px;
+  margin: auto;
+
+  &__list {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    justify-self: flex-end;
+  }
+
+  &__link {
+    font-size: 1.4rem;
+    align-self: center;
+
+    &:first-of-type {
+      padding-right: 2rem;
+
+      @media #{$sm-device} {
+        display: none;
+      }
+
+      & a {
+        color: #000;
+      }
+    }
+
+    &:last-of-type {
+      background-color: #000;
+      border-radius: 1rem;
+
+      & a {
+        display: block;
+        padding: 1rem 2rem;
+        color: #fff;
+      }
+    }
+  }
+
+  .logo {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    & a:visited {
+      color: inherit;
+    }
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+}

@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
+import { Navigation } from 'components/Navigation';
 import Head from 'next/head';
-import Link from 'next/link';
+
 import styles from './Layout.module.scss';
 
 export const siteTitle = 'Joblytics';
@@ -19,13 +20,7 @@ export const Layout = ({ children }: LayoutProps) => (
       <meta name="twitter:card" content="summary_large_image" />
     </Head>
     <header>
-      <nav>
-        <ul>
-          <li>
-            <Link href="/">Home</Link>
-          </li>
-        </ul>
-      </nav>
+      <Navigation />
     </header>
     <main>{children}</main>
   </div>
