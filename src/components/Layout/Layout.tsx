@@ -11,7 +11,7 @@ export type LayoutProps = {
 };
 
 export const Layout = ({ children }: LayoutProps) => (
-  <div className={styles.container}>
+  <div className={styles['layout']}>
     <Head>
       <link rel="icon" href="/favicon.ico" />
       <meta name="description" content="Joblytics" />

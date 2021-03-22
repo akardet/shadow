@@ -1,0 +1,93 @@
+@import 'styles/variables';
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(10rem, 1fr) max-content;
+  gap: 10rem;
+  align-items: center;
+  margin-top: 10rem;
+
+  &__title {
+    font-size: 5.5rem;
+    line-height: 6.7rem;
+  }
+
+  &__subtitle {
+    font-weight: 500;
+    font-size: $h3;
+    margin-top: 2rem;
+    line-height: 4.1rem;
+  }
+
+  &__right {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__left {
+    height: 38rem;
+    position: relative;
+  }
+
+  &__image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 4rem;
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.02),
+      0 6.7px 5.3px rgba(0, 0, 0, 0.028), 0 12.5px 10px rgba(0, 0, 0, 0.035),
+      0 22.3px 17.9px rgba(0, 0, 0, 0.042), 0 41.8px 33.4px rgba(0, 0, 0, 0.05),
+      0 100px 80px rgba(0, 0, 0, 0.07);
+  }
+
+  .button {
+    padding: 1.8rem;
+    background-color: #000;
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 600;
+    max-width: 32rem;
+    text-align: center;
+    border-radius: 1rem;
+    border: #000 solid 5px;
+    position: absolute;
+    bottom: 0;
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover {
+      text-decoration: none;
+      color: #000;
+      background-color: #fff;
+    }
+  }
+
+  @media #{$sm-device} {
+    grid-template-columns: unset;
+    grid-template-rows: 40rem 1fr;
+    margin-top: 0;
+
+    &__right {
+      grid-row: 1;
+      display: block;
+    }
+
+    &__left {
+      margin-top: -7rem;
+      height: 59rem;
+    }
+  }
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  height: 20rem;
+  justify-content: center;
+  display: grid;
+  align-items: center;
+
+  @media #{$sm-device} {
+    position: relative;
+    justify-content: flex-start;
+  }
+}
