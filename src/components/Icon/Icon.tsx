@@ -1,4 +1,4 @@
-import Chevron from '../../icons/chevron.svg'
+import Chevron from '../../../public/icons/chevron.svg'
 
 export interface IconProps {
   name?: 'chevron'
