@@ -1,42 +1,74 @@
-import Link from 'next/link';
-import Head from 'next/head';
-import { Layout, siteTitle } from 'components/Layout';
-import styles from 'styles/pages/home.module.scss';
+import Head from 'next/head'
+import { Layout, siteTitle } from 'components/Layout'
+import { Section } from 'components/Section'
+import { Button } from 'components/Button'
+import { Block } from 'components/Block'
+import styles from 'styles/pages/home.module.scss'
+
+const data = {
+  hero: {
+    eyebrow: 'The Premiere',
+    title: 'Platform for early stage career advancement',
+    description:
+      'Designed to meet the needs of early career professionals. Using real time market data, we accurately asses the skills you need to succeed.',
+    buttonText: 'Sign up',
+    heroImageUrl:
+      'https://res.cloudinary.com/stancharoen/image/upload/v1617567516/hero_se04wg.png',
+    background: {
+      blobUrl:
+        'https://res.cloudinary.com/stancharoen/image/upload/v1617568382/red_blob_g5lz8e.png',
+    },
+  },
+}
 
 export default function Home() {
+  const { hero } = data
   return (
     <Layout>
       <Head>
         <title>{siteTitle}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <section className={styles['hero']}>
-        <div className={styles['hero__left']}>
-          <h1 className={styles['hero__title']}>
-            The go-to platform for career advancement
-          </h1>
-          <h2 className={styles['hero__subtitle']}>
-            Designed to meet the needs of early career professionals. Using
-            real-time market data, we accurately assess the skills you need to
-            succeed
-          </h2>
-          <Link href={'/assess'}>
-            <a className={styles['button']}>Take the Skills Assessment</a>
-          </Link>
-        </div>
-        <div className={styles['hero__right']}>
+      <Section className={styles['hero']}>
+        <div className={styles['hero__content']}>
+          <Block className={styles['hero__text']}>
+            <>
+              <span className={styles['hero__eyebrow']}>{hero.eyebrow}</span>
+              <h1 className={styles['hero__title']}>{hero.title}</h1>
+              <p className={styles['hero__description']}>{hero.description}</p>
+              <Button
+                as={'a'}
+                href={'/signup'}
+                type={'button'}
+                icon={'chevron'}
+                className={styles['hero__button']}
+                iconClassName={styles['hero__button-icon']}
+              >
+                {hero.buttonText}
+              </Button>
+            </>
+          </Block>
+          <Block className={styles['hero__image--wrapper']}>
+            <img
+              className={styles['hero__image']}
+              width={400}
+              height={400}
+              src={hero.heroImageUrl}
+              alt={'Joblytics dashboard'}
+            />
+          </Block>
           <img
-            className={styles['hero__image']}
+            className={styles['background__blob']}
             width={400}
             height={400}
-            src={'/images/dog.jpg'}
+            src={hero.background.blobUrl}
             alt={'black french bulldog looking into the camera'}
           />
         </div>
-      </section>
-      <footer className={styles['footer']}>
+      </Section>
+      {/* <footer className={styles['footer']}>
         <p>© Joblytics - All rights reservered</p>
-      </footer>
+      </footer> */}
     </Layout>
-  );
+  )
 }

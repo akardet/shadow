@@ -1,14 +1,14 @@
-import { ReactNode } from 'react';
-import { Navigation } from 'components/Navigation';
-import Head from 'next/head';
+import { ReactNode } from 'react'
+import { Navigation } from 'components/Navigation'
+import Head from 'next/head'
 
-import styles from './Layout.module.scss';
+import styles from './Layout.module.scss'
 
-export const siteTitle = 'Joblytics';
+export const siteTitle = 'Joblytics'
 
 export type LayoutProps = {
-  children?: ReactNode;
-};
+  children?: ReactNode
+}
 
 export const Layout = ({ children }: LayoutProps) => (
   <div className={styles['layout']}>
@@ -24,4 +24,4 @@ export const Layout = ({ children }: LayoutProps) => (
     </header>
     <main>{children}</main>
   </div>
-);
+)

@@ -2,13 +2,14 @@
 
 .nav {
   display: grid;
-  // grid-template-columns: repeat(2, 1fr);
   grid-template-columns: min-content 1fr;
   align-items: center;
-  max-width: 120rem;
-  padding: 2rem 0;
+  position: absolute;
+  left: calc(50% - min(50vw, 60rem));
+  width: 100%;
+  max-width: min(100vw, 120rem);
+  padding: var(--jl-safearea-padding);
   letter-spacing: 0.5px;
-  margin: auto;
 
   &__list {
     list-style: none;
@@ -32,17 +33,6 @@
         color: #000;
       }
     }
-
-    &:last-of-type {
-      background-color: #000;
-      border-radius: 1rem;
-
-      & a {
-        display: block;
-        padding: 1rem 2rem;
-        color: #fff;
-      }
-    }
   }
 
   .logo {
@@ -50,6 +40,8 @@
     font-size: 2rem;
     font-weight: 700;
     text-transform: uppercase;
+    width: 13rem;
+    cursor: pointer;
 
     & a:visited {
       color: inherit;
@@ -58,5 +50,15 @@
 
   a:hover {
     text-decoration: none;
+  }
+}
+
+.nav__button {
+  background-color: var(--jl-white);
+  color: #fe906c;
+  box-shadow: 0 0.8rem 2rem var(--jl-white-op10);
+
+  &-icon {
+    fill: #fe906c;
   }
 }

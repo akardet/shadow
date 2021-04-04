@@ -1,0 +1,49 @@
+@import 'styles/variables';
+
+.button {
+  padding: 1.2rem 2.5rem;
+  border-radius: 10rem;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  line-height: 1.2rem;
+  height: max-content;
+  width: max-content;
+  font-size: 1.4rem;
+  letter-spacing: 0.8px;
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 2pt blue;
+  }
+
+  &:hover {
+    text-decoration: none;
+
+    .button__icon {
+      transform: translateX(0.5rem);
+    }
+  }
+}
+
+.button__icon {
+  margin-left: 1.3rem;
+  width: 0.7rem;
+  display: block;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+
+  &:after {
+    content: '';
+    display: block;
+  }
+
+  // &-background {
+  //   display: block;
+  //   width: 2rem;
+  //   height: 2rem;
+  //   background-color: blue;
+  //   border-radius: 1rem;
+  // }
+}

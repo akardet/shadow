@@ -1,0 +1,12 @@
+:root {
+  --jl-white: hsla(360, 100%, 100%, 1);
+  --jl-white-op10: hsla(360, 100%, 100%, 0.1);
+  --jl-black: hsla(0, 0%, 15%, 1);
+  --jl-orange: hsla(35, 100%, 65%, 1);
+  --jl-orange-op07: hsla(35, 100%, 65%, 0.07);
+  --jl-violet: hsla(251, 100%, 50%, 1);
+  --jl-violet-op25: hsla(251, 100%, 50%, 0.25);
+
+  --jl-text-color: var(--jl-black);
+  --jl-hero-bg: var(--jl-orange-op07);
+}

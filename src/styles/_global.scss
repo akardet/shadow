@@ -9,6 +9,10 @@
   font-display: swap;
 }
 
+:root {
+  --jl-safearea-padding: 3rem;
+}
+
 /* Box sizing rules */
 *,
 *::before,
@@ -19,7 +23,7 @@
 /* Set the default font size to easy number to divide by (px/root size = rem) */
 html {
   font-size: 62.5%;
-  color: #000;
+  color: var(--jl-text-color);
 }
 
 /* Remove default padding */
@@ -70,6 +74,7 @@ a:not([class]) {
 img {
   max-width: 100%;
   display: block;
+  height: auto;
 }
 
 /* Inherit fonts for inputs and buttons */
@@ -100,6 +105,7 @@ a {
 
 p {
   font-size: $p;
+  letter-spacing: 0.3px;
 }
 
 h4 {
@@ -116,9 +122,4 @@ h2 {
 
 h1 {
   font-size: $h1;
-}
-
-img {
-  max-width: 100%;
-  display: block;
 }
