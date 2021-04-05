@@ -3,6 +3,9 @@ import { Layout, siteTitle } from 'components/Layout'
 import { Section } from 'components/Section'
 import { Button } from 'components/Button'
 import { Block } from 'components/Block'
+import { InfoTile } from 'components/InfoTile'
+import HeroSection from 'components/HeroSection'
+
 import styles from 'styles/pages/home.module.scss'
 
 const data = {
@@ -22,48 +25,65 @@ const data = {
 }
 
 export default function Home() {
-  const { hero } = data
   return (
     <Layout>
       <Head>
         <title>{siteTitle}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Section className={styles['hero']}>
-        <div className={styles['hero__content']}>
-          <Block className={styles['hero__text']}>
-            <>
-              <span className={styles['hero__eyebrow']}>{hero.eyebrow}</span>
-              <h1 className={styles['hero__title']}>{hero.title}</h1>
-              <p className={styles['hero__description']}>{hero.description}</p>
-              <Button
-                as={'a'}
-                href={'/signup'}
-                type={'button'}
-                icon={'chevron'}
-                className={styles['hero__button']}
-                iconClassName={styles['hero__button-icon']}
-              >
-                {hero.buttonText}
-              </Button>
-            </>
-          </Block>
-          <Block className={styles['hero__image--wrapper']}>
-            <img
-              className={styles['hero__image']}
-              width={400}
-              height={400}
-              src={hero.heroImageUrl}
-              alt={'Joblytics dashboard'}
+      <HeroSection />
+      <svg
+        viewBox="0 0 7009 762"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path d="M7009 0H0V761.999L7009 0Z" fill="var(--jl-orange-op07)" />
+        <path
+          d="M0 762L7009 762L7009 0.000732422L0 762Z"
+          fill="var(--jl-white)"
+        />
+      </svg>
+      <Section className={styles['info']}>
+        <div className={styles['info__content']}>
+          <h2 className={styles['info__title']}>{'What is Joblytics?'}</h2>
+          <p className={styles['info__description']}>
+            {
+              'Torem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content'
+            }
+          </p>
+          <div className={styles['info__tiles']}>
+            <InfoTile
+              imageUrl={''}
+              title={'Share Your Skills'}
+              info={
+                'Placeholder text commonly used to demonstrate the visual form of a document or a typeface'
+              }
             />
-          </Block>
-          <img
-            className={styles['background__blob']}
-            width={400}
-            height={400}
-            src={hero.background.blobUrl}
-            alt={'black french bulldog looking into the camera'}
-          />
+            <InfoTile
+              imageUrl={''}
+              title={'Know Your Skill Gaps'}
+              info={
+                'Placeholder text commonly used to demonstrate the visual form of a document or a typeface'
+              }
+            />
+            <InfoTile
+              imageUrl={''}
+              title={'Get Recommended Courses'}
+              info={
+                'Placeholder text commonly used to demonstrate the visual form of a document or a typeface'
+              }
+            />
+          </div>
+          <Button
+            as={'a'}
+            href={'/signup'}
+            type={'button'}
+            icon={'chevron'}
+            className={styles['info__button']}
+            iconClassName={styles['info__button-icon']}
+          >
+            {'Take the Assessment'}
+          </Button>
         </div>
       </Section>
       {/* <footer className={styles['footer']}>
