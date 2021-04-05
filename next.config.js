@@ -1,13 +1,5 @@
-module.exports = {
-  images: {
-    loader: 'cloudinary',
-  },
-  webpack(config) {
-    config.module.rules.push({
-      test: /\.svg$/,
-      use: ['@svgr/webpack'],
-    })
+const withPlugins = require('next-compose-plugins')
+const withSvgr = require('next-svgr')
+const withTM = require('next-transpile-modules')(['gsap', 'gsap/Draggable'])
 
-    return config
-  },
-}
+module.exports = withPlugins([withSvgr, withTM])

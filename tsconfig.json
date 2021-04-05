@@ -16,9 +16,10 @@
     "baseUrl": "./src",
     "paths": {
       "*": ["./*"],
-      "styles/variables": ["./styles/variables/variables"]
+      "styles/variables": ["./styles/variables/variables"],
+      "icons": ["./public/icons"]
     }
   },
   "exclude": ["node_modules"],
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "*.svg"]
 }
