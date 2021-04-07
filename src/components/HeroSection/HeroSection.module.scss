@@ -1,20 +1,28 @@
 @import 'styles/variables';
 
 .hero {
-  background-color: var(--jl-orange-op07);
+  background-color: var(--jl-orange-1);
 }
 
 .hero__content {
-  display: flex;
+  display: grid;
   gap: 2rem;
   padding: var(--jl-safearea-padding);
   max-width: min(100vw, 120rem);
   margin: auto;
   padding-top: 15rem;
+  align-items: center;
+  grid-template-columns: minmax(40rem, 45rem) 1fr;
+  padding-bottom: 0rem;
+  margin-bottom: -6rem;
+  position: relative;
+  z-index: 1;
 
-  @media #{$tablet-device} {
-    flex-wrap: wrap;
-    padding-top: 5rem;
+  @media #{$sm-desktop-device} {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding-top: 15rem;
+    margin-bottom: 0;
   }
 }
 
@@ -23,7 +31,6 @@
   display: grid;
   grid-template-rows: repeat(3, min-content);
   grid-gap: 1rem;
-  padding-top: 10rem;
 }
 
 .hero__eyebrow {
@@ -34,12 +41,11 @@
 
 .hero__title {
   font-size: $h2;
-  min-width: min(25ch, 85vw);
+  max-width: 25ch;
 }
 
 .hero__description {
   max-width: min(50ch, 85vw);
-  line-height: 2.5rem;
   padding: 1.5rem 0;
 }
 
@@ -62,15 +68,5 @@
 
 .hero__image {
   width: 100%;
-  min-width: max(50vw, 30rem);
   height: auto;
-}
-
-.background__blob {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: -1;
-  width: 100%;
-  max-width: min(50vw, 60rem);
 }

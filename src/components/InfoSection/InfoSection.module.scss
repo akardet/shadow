@@ -1,0 +1,50 @@
+@import 'styles/variables';
+
+.info {
+  padding: var(--jl-safearea-padding);
+  text-align: center;
+}
+
+.info__content {
+}
+
+.info__title {
+  font-size: $h3;
+  letter-spacing: 0.8px;
+}
+
+.info__tiles {
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 5rem;
+
+  @media #{$tablet-device} {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.info__description {
+  width: 100%;
+  max-width: min(80ch, 100vw);
+  margin: auto;
+  padding: 1rem 0 7rem 0;
+}
+
+.info__button {
+  background-color: var(--jl-violet);
+  color: var(--jl-white);
+  box-shadow: 0 0.8rem 2rem var(--jl-violet-op25);
+  padding: 1.7rem 0;
+  max-width: max(20rem, 100vw);
+  width: 100%;
+  max-width: 25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+
+  &-icon {
+    fill: var(--jl-white);
+  }
+}

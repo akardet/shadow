@@ -9,7 +9,6 @@ interface InfoTileProps {
 }
 
 export const InfoTile = ({ imageUrl, title, info }: InfoTileProps) => {
-  console.log(imageUrl)
   return (
     <div className={styles['tile']}>
       <div className={styles['image']}>{''}</div>

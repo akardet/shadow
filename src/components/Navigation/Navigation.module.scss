@@ -10,6 +10,7 @@
   max-width: min(100vw, 120rem);
   padding: var(--jl-safearea-padding);
   letter-spacing: 0.5px;
+  z-index: 2;
 
   &__list {
     list-style: none;

@@ -13,10 +13,10 @@ const data = {
     buttonText: 'Sign up',
     heroImageUrl:
       'https://res.cloudinary.com/stancharoen/image/upload/v1617567516/hero_se04wg.png',
-    background: {
-      blobUrl:
-        'https://res.cloudinary.com/stancharoen/image/upload/v1617568382/red_blob_g5lz8e.png',
-    },
+  },
+  background: {
+    blobUrl:
+      'https://res.cloudinary.com/stancharoen/image/upload/v1617568382/red_blob_g5lz8e.png',
   },
 }
 
@@ -51,13 +51,6 @@ export const HeroSection = () => {
             alt={'Joblytics dashboard'}
           />
         </Block>
-        <img
-          className={styles['background__blob']}
-          width={400}
-          height={400}
-          src={hero.background.blobUrl}
-          alt={'black french bulldog looking into the camera'}
-        />
       </div>
     </Section>
   )
