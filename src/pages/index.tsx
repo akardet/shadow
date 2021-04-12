@@ -1,9 +1,6 @@
 import Head from 'next/head'
 import { Layout, siteTitle } from 'components/Layout'
-import { Section } from 'components/Section'
-import { Button } from 'components/Button'
-import { Block } from 'components/Block'
-import { InfoTile } from 'components/InfoTile'
+import { SignUpForm } from 'components/SignUpForm'
 import HeroSection from 'components/HeroSection'
 import InfoSection from 'components/InfoSection'
 
@@ -83,6 +80,19 @@ export default function Home() {
               }
             </p>
           </div>
+        </div>
+      </section>
+      <section className={styles['cta']}>
+        <div className={styles['discord']}>
+          <h2>
+            {'Keep yourself accountable'}
+            <span>{'And stay engaged'}</span>
+          </h2>
+        </div>
+        <div className={styles['signup']}>
+          <h2>{'Sign up'}</h2>
+          <p>{'Stay up to date for when we release our early beta'}</p>
+          <SignUpForm user={{ email: '', firstName: '', lastName: '' }} />
         </div>
       </section>
       {/* <footer className={styles['footer']}>

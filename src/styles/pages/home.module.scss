@@ -70,6 +70,26 @@
   height: auto;
 }
 
+.cta {
+  padding: var(--jl-safearea-padding);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: min(100vw, 120rem);
+  height: 50rem; // TODO: Temporary - Remove
+}
+
+.discord {
+  span {
+    display: block;
+  }
+}
+
+.signup {
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.12);
+  border-radius: 2rem;
+  padding: var(--jl-safearea-padding);
+}
+
 /****************/
 
 .background__svg {
