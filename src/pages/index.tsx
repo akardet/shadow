@@ -3,6 +3,7 @@ import { Layout, siteTitle } from 'components/Layout'
 import { SignUpForm } from 'components/SignUpForm'
 import HeroSection from 'components/HeroSection'
 import InfoSection from 'components/InfoSection'
+import AssessmentSection from 'components/AssessmentSection'
 
 import styles from 'styles/pages/home.module.scss'
 
@@ -50,35 +51,50 @@ export default function Home() {
         />
       </svg>
       <InfoSection />
-      <section className={styles['first']}>
+      <svg viewBox="0 0 3054 252" className={styles['info-first-diagnol-svg']}>
+        <path d="M3054 0L0.5 251.5H3054V0Z" fill="#F6FDFE" />
+        <path
+          d="M0 251.5L3053.5 0.000244141L2.19868e-05 -2.28048e-05L0 251.5Z"
+          fill="white"
+        />
+      </svg>
+      <AssessmentSection />
+      <svg viewBox="0 0 3054 252" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3054 0L0.5 251.5H3054V0Z" fill="white" />
+        <path
+          d="M0 251.5L3053.5 0.000244141L2.19868e-05 -2.28048e-05L0 251.5Z"
+          fill="#F6FDFE"
+        />
+      </svg>
+      <section>
         <div className={styles['first__content']}>
+          <div>
+            <h2 className={styles['first__title']}>
+              {
+                'Then we curate a customized plan to address your personal skill gaps'
+              }
+            </h2>
+            <p>
+              {
+                'Our system crawls the web to build a database of courses that are vetted by our team.'
+              }
+            </p>
+            <p>
+              {
+                'We only curate courses that have been proven to meet current industry standards.'
+              }
+            </p>
+          </div>
           <div>
             <img
               className={styles['first__image']}
               width={400}
               height={400}
               src={
-                'https://res.cloudinary.com/stancharoen/image/upload/v1617767516/first_info_crvlin.png'
+                'https://res.cloudinary.com/dhc96divr/image/upload/v1618628829/Group_282_ggiry7.png'
               }
               alt={'Joblytics dashboard'}
             />
-          </div>
-          <div>
-            <h2 className={styles['first__title']}>
-              {
-                'First we ask you for an honest assessment of what skills you currently have pertaining to your desired career field'
-              }
-            </h2>
-            <p>
-              {
-                'We remove the guess work out of the equation and find the exact skills you need to bridge your current skill gap.'
-              }
-            </p>
-            <p>
-              {
-                'Our Machine Learning software quantifies your current skills to better match you with a job closest to your skill level.'
-              }
-            </p>
           </div>
         </div>
       </section>
@@ -95,6 +111,7 @@ export default function Home() {
           <SignUpForm user={{ email: '', firstName: '', lastName: '' }} />
         </div>
       </section>
+
       {/* <footer className={styles['footer']}>
         <p>© Joblytics - All rights reservered</p>
       </footer> */}

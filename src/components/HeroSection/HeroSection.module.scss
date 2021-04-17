@@ -8,11 +8,12 @@
   display: grid;
   gap: 2rem;
   padding: var(--jl-safearea-padding);
-  max-width: min(100vw, 120rem);
+  max-width: clamp(414px, 130rem, 90vw);
   margin: auto;
   padding-top: 15rem;
   align-items: center;
-  grid-template-columns: minmax(40rem, 45rem) 1fr;
+  grid-template-columns: minmax(40rem, 50rem) minmax(50rem, 70rem);
+  justify-content: space-between;
   padding-bottom: 0rem;
   margin-bottom: -6rem;
   position: relative;

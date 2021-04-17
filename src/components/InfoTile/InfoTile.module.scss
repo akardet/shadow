@@ -3,11 +3,18 @@
 .tile {
   text-align: center;
   width: 100%;
-  max-width: min(100vw, 30rem);
+  max-width: min(100vw, 38rem);
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem 1rem;
+  padding: 5rem;
+  border-radius: 1.5rem;
+  transition: background-color, box-shadow 0.3s ease-in-out;
+
+  &:hover {
+    background-color: var(--jl-white-op10);
+    box-shadow: 0 1.6rem 2.6rem rgba(70, 70, 70, 0.1);
+  }
 }
 
 .image {
@@ -17,6 +24,7 @@
 .title {
   font-size: $h4;
   margin-bottom: 0.5rem;
+  white-space: nowrap;
 }
 
 .info {
@@ -28,7 +36,6 @@
   display: block;
   height: 12rem;
   width: 12rem;
-  background-color: wheat;
   border-radius: 1rem;
   box-shadow: 0 0.6rem 2.6rem rgba(0, 0, 0, 0.1);
 }

@@ -2,10 +2,24 @@
 
 // Custom Fonts
 @font-face {
-  font-family: 'Montserrat';
-  src: url('/fonts/Montserrat/Montserrat-Regular.ttf');
+  font-family: 'Sofia Pro';
+  src: url('/fonts/Sofia_Pro_Regular.otf');
   font-style: normal;
   font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('/fonts/Sofia_Pro_Semibold.otf');
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('/fonts/Sofia_Pro_Bold.otf');
+  font-style: normal;
+  font-weight: 600;
   font-display: swap;
 }
 
@@ -56,7 +70,8 @@ body {
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
-  font-family: 'Montserrat', sans-serif;
+  // font-family: 'Montserrat', sans-serif;
+  font-family: 'Sofia Pro', sans-serif;
 }
 
 /* Remove list styles on ul, ol elements with a class attribute */
@@ -105,7 +120,7 @@ a {
 
 p {
   font-size: 1.8rem;
-  line-height: 2.5rem;
+  line-height: 3rem;
   letter-spacing: 0.3px;
   padding-top: 1.5rem;
 }

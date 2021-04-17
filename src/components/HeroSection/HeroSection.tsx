@@ -9,10 +9,10 @@ const data = {
     eyebrow: 'The Premiere',
     title: 'Platform for early stage career advancement',
     description:
-      'Designed to meet the needs of early career professionals. Using real time market data, we accurately asses the skills you need to succeed.',
+      'By analyzing real-time market data, Joblytics is designed to help you navigate the tricky landscape of career progressions and get you a leg up in your next job search.',
     buttonText: 'Sign up',
     heroImageUrl:
-      'https://res.cloudinary.com/stancharoen/image/upload/v1617567516/hero_se04wg.png',
+      'https://res.cloudinary.com/dhc96divr/image/upload/v1618629040/Group_285_g4cn87.png',
   },
   background: {
     blobUrl:
