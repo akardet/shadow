@@ -1,16 +1,5 @@
 @import 'styles/variables';
 
-.hero-info-diagnol-svg {
-  position: relative;
-  z-index: 0;
-}
-
-.info-first-diagnol-svg {
-  position: relative;
-  z-index: 0;
-  margin-bottom: -1rem;
-}
-
 .first {
   background-color: #f6fdfe;
 }
@@ -23,7 +12,7 @@
   margin: auto;
   align-items: center;
   justify-content: space-between;
-  grid-template-columns: minmax(40rem, 53rem) minmax(50rem, 80rem);
+  grid-template-columns: minmax(50rem, 80rem) minmax(40rem, 58rem);
   position: relative;
   z-index: 1;
 
@@ -75,54 +64,4 @@
 .first__image {
   width: 100%;
   height: auto;
-}
-
-.cta {
-  padding: var(--jl-safearea-padding);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  max-width: clamp(414px, 150rem, 90vw);
-  margin: auto;
-  height: 50rem; // TODO: Temporary - Remove
-}
-
-.discord {
-  span {
-    display: block;
-  }
-}
-
-.signup {
-  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.12);
-  border-radius: 2rem;
-  padding: var(--jl-safearea-padding);
-}
-
-/****************/
-
-.background__svg {
-  position: relative;
-}
-
-.background__blob {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 0;
-  width: 100%;
-  max-width: min(50vw, 60rem);
-}
-
-.footer {
-  position: fixed;
-  bottom: 0;
-  height: 10rem;
-  justify-content: center;
-  display: grid;
-  align-items: center;
-
-  @media #{$sm-device} {
-    position: relative;
-    justify-content: flex-start;
-  }
 }

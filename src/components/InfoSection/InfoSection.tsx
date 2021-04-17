@@ -4,38 +4,52 @@ import { InfoTile } from 'components/InfoTile'
 
 import styles from './InfoSection.module.scss'
 
+const data = {
+  heading: 'How does it work?',
+  description:
+    'A data-driven and cost-effective platform that helps bring the most effective resources together to make you a more effective candidate.',
+  tiles: [
+    {
+      title: 'Take an Assessment',
+      description: 'Tell us about your current skill set and career goals',
+      imageUrl:
+        'https://res.cloudinary.com/dhc96divr/image/upload/v1618629040/Group_281_c5jiew.png',
+      altImageText: 'Icon illustration of a chart',
+    },
+    {
+      title: 'Find your Skill Gaps',
+      description:
+        'Joblytics will identify the most important skills you need to break into your dream job',
+      imageUrl:
+        'https://res.cloudinary.com/dhc96divr/image/upload/v1618628828/Group_280_fhbm7h.png',
+      altImageText: 'Icon illustration of a lightbult',
+    },
+    {
+      title: 'Get a Personalized Recommendation',
+      description:
+        'We’ll curate a personalized set of classes to close your skill gaps & get you interview ready',
+      imageUrl:
+        'https://res.cloudinary.com/dhc96divr/image/upload/v1618628829/Group_279_bgqtwf.png',
+      altImageText: 'Icon illustration of a thumbs up',
+    },
+  ],
+}
+
 export const InfoSection = () => {
   return (
     <Section className={styles['info']}>
       <div className={styles['info__content']}>
-        <h2 className={styles['info__title']}>{'What is Joblytics?'}</h2>
-        <p className={styles['info__description']}>
-          {
-            'Torem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content'
-          }
-        </p>
+        <h2 className={styles['info__title']}>{data.heading}</h2>
+        <p className={styles['info__description']}>{data.description}</p>
         <div className={styles['info__tiles']}>
-          <InfoTile
-            imageUrl={''}
-            title={'Share Your Skills'}
-            info={
-              'Placeholder text commonly used to demonstrate the visual form of a document or a typeface'
-            }
-          />
-          <InfoTile
-            imageUrl={''}
-            title={'Know Your Skill Gaps'}
-            info={
-              'Placeholder text commonly used to demonstrate the visual form of a document or a typeface'
-            }
-          />
-          <InfoTile
-            imageUrl={''}
-            title={'Get Recommended Courses'}
-            info={
-              'Placeholder text commonly used to demonstrate the visual form of a document or a typeface'
-            }
-          />
+          {data.tiles.map(({ title, description, imageUrl, altImageText }) => (
+            <InfoTile
+              imageUrl={imageUrl}
+              title={title}
+              info={description}
+              altImageText={altImageText}
+            />
+          ))}
         </div>
         <Button
           as={'a'}
