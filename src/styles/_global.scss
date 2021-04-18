@@ -67,12 +67,13 @@ dl,
 dd {
   margin: 0;
 }
-
+html {
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+}
 /* Set core body defaults */
 body {
   min-height: 100vh;
-  scroll-behavior: smooth;
-  text-rendering: optimizeSpeed;
   line-height: 1.5;
   // font-family: 'Montserrat', sans-serif;
   font-family: 'Sofia Pro', sans-serif;
@@ -127,7 +128,7 @@ p {
   line-height: 3rem;
   letter-spacing: 0.3px;
   padding-top: 1.5rem;
-  color: var(--jl-black-op7);
+  color: var(--jl-black-op80);
 
   @media #{$sm-device} {
     line-height: 4rem;

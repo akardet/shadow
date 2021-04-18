@@ -2,6 +2,7 @@
 
 .hero {
   background-color: var(--jl-orange-1);
+  margin-top: -10rem; // Account for sticky nav
 }
 
 .hero__content {

@@ -12,6 +12,9 @@
   width: max-content;
   font-size: $p;
   letter-spacing: 0.8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   &:focus {
     outline: none;

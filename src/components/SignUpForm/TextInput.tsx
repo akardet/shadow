@@ -34,6 +34,7 @@ export const TextInput = ({
     <div className={classes}>
       <Label htmlFor={id} className={styles['form__label']}>
         {label}
+        <InputFeedback error={error} />
       </Label>
       <input
         id={id}
@@ -46,7 +47,6 @@ export const TextInput = ({
         onChange={onChange}
         {...props}
       />
-      <InputFeedback error={error} />
     </div>
   )
 }

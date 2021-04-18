@@ -7,6 +7,8 @@ import HeroSection from 'components/HeroSection'
 import InfoSection from 'components/InfoSection'
 import AssessmentSection from 'components/AssessmentSection'
 import { Block } from 'components/Block'
+import { Button } from 'components/Button'
+import { Icon } from 'components/Icon'
 
 const data = {
   hero: {
@@ -20,7 +22,7 @@ const data = {
   },
   background: {
     blobUrl:
-      'https://res.cloudinary.com/stancharoen/image/upload/v1617568382/red_blob_g5lz8e.png',
+      'https://res.cloudinary.com/dhc96divr/image/upload/v1618720323/Group_286_jwcpot.png',
   },
 }
 
@@ -36,7 +38,7 @@ export default function Home() {
         width={400}
         height={400}
         src={data.background.blobUrl}
-        alt={'black french bulldog looking into the camera'}
+        alt={''}
       />
       <HeroSection />
       <svg
@@ -139,9 +141,9 @@ export default function Home() {
         </Block>
       </section>
       <section className={styles['cta']}>
-        <div className={styles['discord']}>
+        <div className={styles['signup__image-container']}>
           <img
-            className={styles['background-image']}
+            className={styles['signup__image']}
             width={400}
             height={400}
             src={
@@ -154,6 +156,16 @@ export default function Home() {
           <h2>{'Sign up'}</h2>
           <p>{'Stay up to date for when we release our early beta'}</p>
           <SignUpForm user={{ email: '', firstName: '', lastName: '' }} />
+          <p className={styles['divider']}>{'And'}</p>
+          <Button className={styles['discord__button']}>
+            <span className={styles['discord__button-wrapper']}>
+              <Icon
+                className={styles['discord__button-icon']}
+                name={'discord'}
+              />
+              {'Join our Discord'}
+            </span>
+          </Button>
         </div>
       </section>
 

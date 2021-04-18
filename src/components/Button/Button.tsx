@@ -25,7 +25,7 @@ export type ButtonProps = (ButtonHTMLAttributes<any> &
   as?: ButtonAs
   ref?: ForwardedRef<HTMLButtonElement & HTMLAnchorElement>
   type?: 'button' | 'submit' | 'reset'
-  icon?: 'chevron'
+  icon?: 'chevron' | 'discord'
   iconPlacement?: 'end' | 'start'
   iconClassName?: string
   children?: ReactNode

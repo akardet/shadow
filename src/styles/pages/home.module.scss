@@ -25,7 +25,7 @@
   grid-template-columns: minmax(40rem, 53rem) minmax(50rem, 80rem);
   position: relative;
   z-index: 1;
-  padding: 10rem var(--jl-safearea-padding);
+  padding: 3rem var(--jl-safearea-padding) 10rem var(--jl-safearea-padding);
 
   @media #{$sm-desktop-device} {
     grid-template-columns: 1fr;
@@ -182,7 +182,7 @@
 }
 
 .cta {
-  padding: var(--jl-safearea-padding);
+  padding: 10rem var(--jl-safearea-padding);
   display: grid;
   grid-template-columns: 1fr 1fr;
   max-width: clamp(414px, 150rem, 90vw);
@@ -195,18 +195,69 @@
   }
 }
 
-.discord {
-  span {
-    display: block;
-  }
+.signup__image {
+  width: 100%;
 }
 
 .signup {
   border-radius: 2rem;
   padding: var(--jl-safearea-padding);
 
+  & p {
+    padding-top: 0;
+    line-height: 3rem;
+  }
+
   @media #{$sm-device} {
     grid-row: 2;
+  }
+
+  .divider {
+    text-align: center;
+    font-size: 1.3rem;
+    color: var(--jl-grey);
+    position: relative;
+    padding: 2rem 0;
+
+    &:before,
+    &:after {
+      content: '';
+      display: block;
+      border: 1px solid var(--jl-grey);
+      position: absolute;
+      opacity: 0.3;
+    }
+
+    &:after {
+      top: 40%;
+      width: 42%;
+    }
+
+    &:before {
+      top: 40%;
+      width: 42%;
+      right: 0;
+    }
+  }
+
+  .discord__button {
+    width: 100%;
+    background-color: var(--jl-discord);
+    color: var(--jl-white);
+    display: flex;
+    align-items: center;
+    height: 4.4rem;
+
+    &-icon {
+      width: 2rem;
+      fill: var(--jl-white);
+    }
+
+    &-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
   }
 }
 

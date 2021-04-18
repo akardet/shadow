@@ -34,7 +34,7 @@ export const Form = ({ className }: FormPropTypes) => {
       validationSchema={() => {
         return Yup.object().shape({
           firstName: Yup.string()
-            .min(2, 'Minimum of 2 characters is required')
+            .min(2, 'Minimum of 2 characters')
             .required('Required'),
           lastName: Yup.string().required('Required'),
           email: Yup.string()
@@ -117,15 +117,25 @@ export const Form = ({ className }: FormPropTypes) => {
             onBlur={handleBlur}
           />
           <Button
+            type="submit"
+            className={classnames(
+              styles['input__button'],
+              styles['input__button-submit'],
+            )}
+            disabled={isSubmitting}
+          >
+            {submitMessage}
+          </Button>
+          <Button
             type="button"
-            className="outline"
             onClick={handleReset}
             disabled={!dirty || isSubmitting}
+            className={classnames(
+              styles['input__button'],
+              styles['input__button-reset'],
+            )}
           >
             Reset
-          </Button>
-          <Button type="submit" disabled={isSubmitting}>
-            {submitMessage}
           </Button>
         </form>
       )}

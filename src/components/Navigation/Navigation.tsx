@@ -24,7 +24,7 @@ export const Navigation = () => {
           <Link href={'/story'}>Our Story</Link>
         </li>
         <li className={styles['nav__link']}>
-          <Link href={'/signup'}>
+          <Link href={'#signup'}>
             <Button
               className={styles['nav__button']}
               iconClassName={styles['nav__button-icon']}
