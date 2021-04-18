@@ -19,9 +19,9 @@ export const Layout = ({ children }: LayoutProps) => (
       <meta name="og:title" content={siteTitle} />
       <meta name="twitter:card" content="summary_large_image" />
     </Head>
-    <header>
+    <main>
       <Navigation />
-    </header>
-    <main>{children}</main>
+      {children}
+    </main>
   </div>
 )

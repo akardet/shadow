@@ -1,15 +1,21 @@
 :root {
   --jl-white: hsla(360, 100%, 100%, 1);
+  --jl-white-op8: hsla(360, 100%, 100%, 0.8);
   --jl-white-op10: hsla(360, 100%, 100%, 0.1);
   --jl-black: hsla(0, 0%, 20%, 1);
+  --jl-black-op7: hsla(0, 0%, 20%, 0.8);
   --jl-orange: hsla(35, 100%, 65%, 1);
   --jl-orange-1: hsla(39, 100%, 97%, 1);
   --jl-orange-op07: hsla(35, 100%, 65%, 0.07);
+  --jl-yellow: hsla(35, 100%, 65%, 1);
   --jl-violet: hsla(251, 100%, 50%, 1);
   --jl-violet-op25: hsla(251, 100%, 50%, 0.25);
   --jl-violet-op5: hsla(251, 100%, 50%, 0.05);
+  --jl-red: hsla(0, 64%, 57%, 1);
+  --jl-red-op40: hsla(0, 94%, 80%, 0.4);
 
   --jl-text-color: var(--jl-black);
+  --jl-error: var(--jl-red);
   --jl-hero-bg: var(--jl-orange-1);
   --jl-hero-svg-top: var(--jl-orange-1);
 }

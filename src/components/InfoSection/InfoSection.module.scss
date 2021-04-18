@@ -13,7 +13,9 @@
 .info__tiles {
   display: flex;
   justify-content: space-evenly;
-  padding-bottom: 5rem;
+  max-width: 1200px;
+  margin: auto;
+  padding-bottom: 2rem;
 
   @media #{$tablet-device} {
     flex-direction: column;
@@ -28,6 +30,13 @@
   padding: 1rem 0 7rem 0;
 }
 
+.info__announcment {
+  font-size: 1.4rem;
+  max-width: 35ch;
+  margin: auto;
+  line-height: 2.5rem;
+}
+
 .info__button {
   background-color: var(--jl-violet);
   color: var(--jl-white);
@@ -40,6 +49,11 @@
   justify-content: center;
   align-items: center;
   margin: auto;
+
+  &:disabled {
+    opacity: 0.4;
+    filter: blur(1px);
+  }
 
   &-icon {
     fill: var(--jl-white);

@@ -29,13 +29,7 @@ export const TextInput = ({
   className,
   ...props
 }: TextInputProp) => {
-  const classes = classnames(
-    styles['input__group'],
-    {
-      'animated shake error': !!error,
-    },
-    className,
-  )
+  const classes = classnames(styles['input__group'], className)
   return (
     <div className={classes}>
       <Label htmlFor={id} className={styles['form__label']}>
@@ -43,7 +37,10 @@ export const TextInput = ({
       </Label>
       <input
         id={id}
-        className={styles['form__input']}
+        className={classnames(
+          styles['form__input'],
+          !!error && styles['error'],
+        )}
         type={type}
         value={value}
         onChange={onChange}

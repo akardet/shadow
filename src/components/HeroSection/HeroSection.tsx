@@ -32,7 +32,7 @@ export const HeroSection = () => {
             <p className={styles['hero__description']}>{hero.description}</p>
             <Button
               as={'a'}
-              href={'/signup'}
+              href={'#signup'}
               type={'button'}
               icon={'chevron'}
               className={styles['hero__button']}

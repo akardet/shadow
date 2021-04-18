@@ -1,7 +1,7 @@
 @import 'styles/variables';
 
 .button {
-  padding: 1.2rem 2.5rem;
+  padding: 1.6rem 3rem;
   border-radius: 10rem;
   border: none;
   cursor: pointer;
@@ -10,7 +10,7 @@
   line-height: 1.2rem;
   height: max-content;
   width: max-content;
-  font-size: 1.4rem;
+  font-size: $p;
   letter-spacing: 0.8px;
 
   &:focus {

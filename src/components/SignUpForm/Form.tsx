@@ -78,6 +78,7 @@ export const Form = ({ className }: FormPropTypes) => {
         isSubmitting,
       }) => (
         <form
+          id={'signup'}
           className={classnames(styles['signup__form'], className)}
           onSubmit={handleSubmit}
         >

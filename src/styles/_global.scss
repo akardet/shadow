@@ -25,6 +25,10 @@
 
 :root {
   --jl-safearea-padding: 3rem;
+
+  @media #{$sm-device} {
+    --jl-safearea-padding: 2rem;
+  }
 }
 
 /* Box sizing rules */
@@ -123,6 +127,12 @@ p {
   line-height: 3rem;
   letter-spacing: 0.3px;
   padding-top: 1.5rem;
+  color: var(--jl-black-op7);
+
+  @media #{$sm-device} {
+    line-height: 4rem;
+    letter-spacing: 0.4px;
+  }
 }
 
 h4 {

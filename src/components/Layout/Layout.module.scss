@@ -3,4 +3,6 @@
 .layout {
   position: relative;
   // margin: auto;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }

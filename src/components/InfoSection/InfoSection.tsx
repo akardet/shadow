@@ -52,15 +52,21 @@ export const InfoSection = () => {
           ))}
         </div>
         <Button
-          as={'a'}
+          as={'button'}
           href={'/signup'}
           type={'button'}
           icon={'chevron'}
           className={styles['info__button']}
           iconClassName={styles['info__button-icon']}
+          disabled
         >
           {'Take the Assessment'}
         </Button>
+        <p className={styles['info__announcment']}>
+          {
+            'Sign up now to get early access before the assessment is released to the public'
+          }
+        </p>
       </div>
     </Section>
   )

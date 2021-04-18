@@ -1,11 +1,12 @@
 import Head from 'next/head'
+import styles from 'styles/pages/home.module.scss'
+
 import { Layout, siteTitle } from 'components/Layout'
 import { SignUpForm } from 'components/SignUpForm'
 import HeroSection from 'components/HeroSection'
 import InfoSection from 'components/InfoSection'
 import AssessmentSection from 'components/AssessmentSection'
-
-import styles from 'styles/pages/home.module.scss'
+import { Block } from 'components/Block'
 
 const data = {
   hero: {
@@ -98,12 +99,56 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <section className={styles['comingsoon']}>
+        <Block className={styles['cs-block']}>
+          <div className={styles['cs__content']}>
+            <div>
+              <p className={styles['cs-eyebrow']}>Coming Soon</p>
+              <h2 className={styles['cs__title']}>
+                {
+                  'Lastly we pair you with recruiters for potential job postings'
+                }
+              </h2>
+              <p>
+                {
+                  'Impress recruiters with your relevant skillset and increase your chances to confidently land your dream job'
+                }
+              </p>
+            </div>
+            <div className={styles['cs__images']}>
+              <img
+                className={styles['foreground-image']}
+                width={400}
+                height={400}
+                src={
+                  'https://res.cloudinary.com/dhc96divr/image/upload/v1618628829/Group_283_aqsbbj.png'
+                }
+                alt={'Joblytics dashboard'}
+              />
+              <img
+                className={styles['background-image']}
+                width={400}
+                height={400}
+                src={
+                  'https://res.cloudinary.com/dhc96divr/image/upload/v1618628828/Group_153_xsns9x.png'
+                }
+                alt={'Joblytics dashboard'}
+              />
+            </div>
+          </div>
+        </Block>
+      </section>
       <section className={styles['cta']}>
         <div className={styles['discord']}>
-          <h2>
-            {'Keep yourself accountable'}
-            <span>{'And stay engaged'}</span>
-          </h2>
+          <img
+            className={styles['background-image']}
+            width={400}
+            height={400}
+            src={
+              'https://res.cloudinary.com/dhc96divr/image/upload/v1618628829/Group_azro6h.png'
+            }
+            alt={'Joblytics dashboard'}
+          />
         </div>
         <div className={styles['signup']}>
           <h2>{'Sign up'}</h2>
