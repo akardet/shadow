@@ -100,6 +100,7 @@
 
   @media #{$tablet-device} {
     grid-template-columns: unset;
+    padding-top: 4rem;
   }
 }
 
@@ -175,6 +176,7 @@
     @media #{$tablet-device} {
       top: unset;
       bottom: 0;
+      left: 0;
     }
   }
 }
@@ -217,10 +219,14 @@
 .background__blob {
   position: absolute;
   top: 0;
-  right: -1rem;
+  right: 0;
   z-index: 0;
   width: 100%;
   max-width: min(50vw, 60rem);
+
+  @media #{$sm-device} {
+    display: none;
+  }
 }
 
 .footer {

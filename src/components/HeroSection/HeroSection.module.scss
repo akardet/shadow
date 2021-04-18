@@ -21,7 +21,8 @@
 
   @media #{$sm-desktop-device} {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr min-content;
+    grid-gap: 5rem;
     padding-top: 15rem;
     margin-bottom: 0;
   }
@@ -60,6 +61,10 @@
 
   &-icon {
     fill: var(--jl-white);
+  }
+
+  @media #{$sm-device} {
+    display: none;
   }
 }
 

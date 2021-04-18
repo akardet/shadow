@@ -28,6 +28,10 @@
   max-width: min(70ch, 100vw);
   margin: auto;
   padding: 1rem 0 7rem 0;
+
+  @media #{$sm-device} {
+    padding-bottom: 1.5rem;
+  }
 }
 
 .info__announcment {
