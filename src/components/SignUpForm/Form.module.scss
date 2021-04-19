@@ -10,12 +10,15 @@
   @media #{$sm-device} {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
   }
 }
 
 .input__group {
   position: relative;
+
+  @media #{$sm-device} {
+    margin: 1rem 0;
+  }
 
   .form__input {
     display: block;
@@ -57,7 +60,8 @@
 }
 
 .input__button {
-  transition: opacity 0.3s ease-out;
+  margin-top: 1rem;
+
   &:hover {
     opacity: 0.8;
   }

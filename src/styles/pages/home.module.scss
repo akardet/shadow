@@ -185,12 +185,14 @@
   padding: 10rem var(--jl-safearea-padding);
   display: grid;
   grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: flex-end;
   max-width: clamp(414px, 150rem, 90vw);
   margin: auto;
-  height: 50rem; // TODO: Temporary - Remove
 
   @media #{$sm-device} {
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: repeat(2, min-content);
+    grid-gap: 2rem;
     grid-template-columns: unset;
   }
 }
@@ -202,6 +204,7 @@
 .signup {
   border-radius: 2rem;
   padding: var(--jl-safearea-padding);
+  max-width: 60rem;
 
   & p {
     padding-top: 0;
@@ -225,17 +228,12 @@
       display: block;
       border: 1px solid var(--jl-grey);
       position: absolute;
+      top: 48%;
+      width: 42%;
       opacity: 0.3;
     }
 
-    &:after {
-      top: 40%;
-      width: 42%;
-    }
-
     &:before {
-      top: 40%;
-      width: 42%;
       right: 0;
     }
   }
@@ -248,15 +246,19 @@
     align-items: center;
     height: 4.4rem;
 
+    &:hover {
+      opacity: 0.8;
+    }
+
     &-icon {
       width: 2rem;
       fill: var(--jl-white);
+      margin-right: 1.5rem;
     }
 
     &-wrapper {
       display: flex;
       align-items: center;
-      gap: 1rem;
     }
   }
 }
