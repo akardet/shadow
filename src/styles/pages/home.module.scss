@@ -62,10 +62,10 @@
   padding: 1.7rem 0;
   max-width: max(20rem, 100vw);
   width: 100%;
-  max-width: 20rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 3rem;
 
   &-icon {
     fill: var(--jl-white);
@@ -283,11 +283,10 @@
 }
 
 .footer {
-  position: fixed;
   bottom: 0;
   height: 10rem;
-  justify-content: center;
-  display: grid;
+  justify-content: space-around;
+  display: flex;
   align-items: center;
 
   @media #{$sm-device} {

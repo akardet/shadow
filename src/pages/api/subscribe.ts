@@ -37,7 +37,6 @@ export default async (req, res) => {
       },
     )
 
-    console.log('response:', response)
     // 7. Swallow any errors from Mailchimp and return a better error message.
     if (response.status >= 400) {
       return res.status(400).json({

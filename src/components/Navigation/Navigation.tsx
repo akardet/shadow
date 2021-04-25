@@ -32,7 +32,7 @@ export const Navigation = () => {
               as={'button'}
               type={'button'}
             >
-              Sign up
+              {'Join the waitlist'}
             </Button>
           </Link>
         </li>

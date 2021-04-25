@@ -16,7 +16,7 @@ const data = {
     title: 'Platform for early stage career advancement',
     description:
       'Designed to meet the needs of early career professionals. Using real time market data, we accurately asses the skills you need to succeed.',
-    buttonText: 'Sign up',
+    buttonText: 'Join the waitlist',
     heroImageUrl:
       'https://res.cloudinary.com/stancharoen/image/upload/v1617567516/hero_se04wg.png',
   },
@@ -87,6 +87,16 @@ export default function Home() {
                 'We only curate courses that have been proven to meet current industry standards.'
               }
             </p>
+            <Button
+              as={'a'}
+              href={'#signup'}
+              type={'button'}
+              icon={'chevron'}
+              className={styles['first__button']}
+              iconClassName={styles['first__button-icon']}
+            >
+              {'Join the waitlist'}
+            </Button>
           </div>
           <div>
             <img
@@ -153,11 +163,15 @@ export default function Home() {
           />
         </div>
         <div className={styles['signup']}>
-          <h2>{'Sign up'}</h2>
+          <h2>{'Join the waitlist'}</h2>
           <p>{'Stay up to date for when we release our early beta'}</p>
           <SignUpForm user={{ email: '', firstName: '', lastName: '' }} />
           <p className={styles['divider']}>{'And'}</p>
-          <Button className={styles['discord__button']}>
+          <Button
+            as={'a'}
+            href={'https://discord.gg/URGCdzfQMM'}
+            className={styles['discord__button']}
+          >
             <span className={styles['discord__button-wrapper']}>
               <Icon
                 className={styles['discord__button-icon']}
@@ -169,9 +183,15 @@ export default function Home() {
         </div>
       </section>
 
-      {/* <footer className={styles['footer']}>
-        <p>© Joblytics - All rights reservered</p>
-      </footer> */}
+      <footer className={styles['footer']}>
+        <p>Joblytics ©2021</p>
+        <div>
+          <p>
+            All Rights Reserved | <a href={'/'}>Terms and Condition</a> |{' '}
+            <a href={'/'}>Privacy Policy</a>
+          </p>
+        </div>
+      </footer>
     </Layout>
   )
 }

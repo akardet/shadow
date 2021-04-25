@@ -33,10 +33,6 @@ export const Form = ({ className }: FormPropTypes) => {
       initialValues={{ email: '', firstName: '', lastName: '' }}
       validationSchema={() => {
         return Yup.object().shape({
-          firstName: Yup.string()
-            .min(2, 'Minimum of 2 characters')
-            .required('Required'),
-          lastName: Yup.string().required('Required'),
           email: Yup.string()
             .email('Invalid email address')
             .required('Required'),
@@ -70,11 +66,9 @@ export const Form = ({ className }: FormPropTypes) => {
         values,
         touched,
         errors,
-        dirty,
         handleChange,
         handleBlur,
         handleSubmit,
-        handleReset,
         isSubmitting,
       }) => (
         <form
@@ -126,7 +120,7 @@ export const Form = ({ className }: FormPropTypes) => {
           >
             {submitMessage}
           </Button>
-          <Button
+          {/* <Button
             type="button"
             onClick={handleReset}
             disabled={!dirty || isSubmitting}
@@ -136,7 +130,7 @@ export const Form = ({ className }: FormPropTypes) => {
             )}
           >
             Reset
-          </Button>
+          </Button> */}
         </form>
       )}
     </Formik>

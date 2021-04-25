@@ -10,6 +10,7 @@ const data = {
     'A data-driven and cost-effective platform that helps bring the most effective resources together to make you a more effective candidate.',
   tiles: [
     {
+      key: 'infoTile-1',
       title: 'Take an Assessment',
       description: 'Tell us about your current skill set and career goals',
       imageUrl:
@@ -17,6 +18,7 @@ const data = {
       altImageText: 'Icon illustration of a chart',
     },
     {
+      key: 'infoTile-2',
       title: 'Find your Skill Gaps',
       description:
         'Joblytics will identify the most important skills you need to break into your dream job',
@@ -25,6 +27,7 @@ const data = {
       altImageText: 'Icon illustration of a lightbult',
     },
     {
+      key: 'infoTile-3',
       title: 'Get a Personalized Recommendation',
       description:
         'We’ll curate a personalized set of classes to close your skill gaps & get you interview ready',
@@ -42,31 +45,28 @@ export const InfoSection = () => {
         <h2 className={styles['info__title']}>{data.heading}</h2>
         <p className={styles['info__description']}>{data.description}</p>
         <div className={styles['info__tiles']}>
-          {data.tiles.map(({ title, description, imageUrl, altImageText }) => (
-            <InfoTile
-              imageUrl={imageUrl}
-              title={title}
-              info={description}
-              altImageText={altImageText}
-            />
-          ))}
+          {data.tiles.map(
+            ({ key, title, description, imageUrl, altImageText }) => (
+              <InfoTile
+                key={key}
+                imageUrl={imageUrl}
+                title={title}
+                info={description}
+                altImageText={altImageText}
+              />
+            ),
+          )}
         </div>
         <Button
-          as={'button'}
-          href={'/signup'}
+          as={'a'}
+          href={'#signup'}
           type={'button'}
           icon={'chevron'}
           className={styles['info__button']}
           iconClassName={styles['info__button-icon']}
-          disabled
         >
-          {'Take the Assessment'}
+          {'Join the waitlist'}
         </Button>
-        <p className={styles['info__announcment']}>
-          {
-            'Sign up now to get early access before the assessment is released to the public'
-          }
-        </p>
       </div>
     </Section>
   )

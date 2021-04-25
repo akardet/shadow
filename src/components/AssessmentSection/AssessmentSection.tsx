@@ -1,4 +1,5 @@
 import { Section } from 'components/Section'
+import { Button } from 'components/Button'
 
 import styles from './AssessmentSection.module.scss'
 
@@ -33,6 +34,16 @@ export const AssessmentSection = () => {
               'Our Machine Learning software quantifies your current skills to better match you with a job closest to your skill level.'
             }
           </p>
+          <Button
+            as={'a'}
+            href={'#signup'}
+            type={'button'}
+            icon={'chevron'}
+            className={styles['first__button']}
+            iconClassName={styles['first__button-icon']}
+          >
+            {'Join the waitlist'}
+          </Button>
         </div>
       </div>
     </Section>

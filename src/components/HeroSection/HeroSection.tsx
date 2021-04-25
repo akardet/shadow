@@ -10,7 +10,7 @@ const data = {
     title: 'Platform for early stage career advancement',
     description:
       'By analyzing real-time market data, Joblytics is designed to help you navigate the tricky landscape of career progressions and get you a leg up in your next job search.',
-    buttonText: 'Sign up',
+    buttonText: 'Join the waitlist',
     heroImageUrl:
       'https://res.cloudinary.com/dhc96divr/image/upload/v1618629040/Group_285_g4cn87.png',
   },
