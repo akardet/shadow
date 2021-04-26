@@ -20,9 +20,9 @@ export const Navigation = () => {
         </Link>
       </div>
       <ul className={styles['nav__list']}>
-        <li className={styles['nav__link']}>
+        {/* <li className={styles['nav__link']}>
           <Link href={'/story'}>Our Story</Link>
-        </li>
+        </li> */}
         <li className={styles['nav__link']}>
           <Link href={'#signup'}>
             <Button

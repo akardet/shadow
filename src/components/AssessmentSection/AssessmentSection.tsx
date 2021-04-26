@@ -15,7 +15,7 @@ export const AssessmentSection = () => {
             src={
               'https://res.cloudinary.com/stancharoen/image/upload/v1617767516/first_info_crvlin.png'
             }
-            alt={'Joblytics dashboard'}
+            alt={'Taking the Joblytics skills assessment'}
           />
         </div>
         <div>

@@ -1,30 +1,14 @@
 import Head from 'next/head'
+import Link from 'next/link'
 import styles from 'styles/pages/home.module.scss'
 
 import { Layout, siteTitle } from 'components/Layout'
-import { SignUpForm } from 'components/SignUpForm'
 import HeroSection from 'components/HeroSection'
 import InfoSection from 'components/InfoSection'
 import AssessmentSection from 'components/AssessmentSection'
-import { Block } from 'components/Block'
-import { Button } from 'components/Button'
-import { Icon } from 'components/Icon'
-
-const data = {
-  hero: {
-    eyebrow: 'The Premiere',
-    title: 'Platform for early stage career advancement',
-    description:
-      'Designed to meet the needs of early career professionals. Using real time market data, we accurately asses the skills you need to succeed.',
-    buttonText: 'Join the waitlist',
-    heroImageUrl:
-      'https://res.cloudinary.com/stancharoen/image/upload/v1617567516/hero_se04wg.png',
-  },
-  background: {
-    blobUrl:
-      'https://res.cloudinary.com/dhc96divr/image/upload/v1618720323/Group_286_jwcpot.png',
-  },
-}
+import SignUpSection from 'components/SignUpSection'
+import { ComingSoon } from 'components/ComingSoon'
+import PlanSection from 'components/PlanSection'
 
 export default function Home() {
   return (
@@ -33,13 +17,6 @@ export default function Home() {
         <title>{siteTitle}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <img
-        className={styles['background__blob']}
-        width={400}
-        height={400}
-        src={data.background.blobUrl}
-        alt={''}
-      />
       <HeroSection />
       <svg
         viewBox="0 0 7009 762"
@@ -69,126 +46,15 @@ export default function Home() {
           fill="#F6FDFE"
         />
       </svg>
-      <section>
-        <div className={styles['first__content']}>
-          <div>
-            <h2 className={styles['first__title']}>
-              {
-                'Then we curate a customized plan to address your personal skill gaps'
-              }
-            </h2>
-            <p>
-              {
-                'Our system crawls the web to build a database of courses that are vetted by our team.'
-              }
-            </p>
-            <p>
-              {
-                'We only curate courses that have been proven to meet current industry standards.'
-              }
-            </p>
-            <Button
-              as={'a'}
-              href={'#signup'}
-              type={'button'}
-              icon={'chevron'}
-              className={styles['first__button']}
-              iconClassName={styles['first__button-icon']}
-            >
-              {'Join the waitlist'}
-            </Button>
-          </div>
-          <div>
-            <img
-              className={styles['first__image']}
-              width={400}
-              height={400}
-              src={
-                'https://res.cloudinary.com/dhc96divr/image/upload/v1618628829/Group_282_ggiry7.png'
-              }
-              alt={'Joblytics dashboard'}
-            />
-          </div>
-        </div>
-      </section>
-      <section className={styles['comingsoon']}>
-        <Block className={styles['cs-block']}>
-          <div className={styles['cs__content']}>
-            <div>
-              <p className={styles['cs-eyebrow']}>Coming Soon</p>
-              <h2 className={styles['cs__title']}>
-                {
-                  'Lastly we pair you with recruiters for potential job postings'
-                }
-              </h2>
-              <p>
-                {
-                  'Impress recruiters with your relevant skillset and increase your chances to confidently land your dream job'
-                }
-              </p>
-            </div>
-            <div className={styles['cs__images']}>
-              <img
-                className={styles['foreground-image']}
-                width={400}
-                height={400}
-                src={
-                  'https://res.cloudinary.com/dhc96divr/image/upload/v1618628829/Group_283_aqsbbj.png'
-                }
-                alt={'Joblytics dashboard'}
-              />
-              <img
-                className={styles['background-image']}
-                width={400}
-                height={400}
-                src={
-                  'https://res.cloudinary.com/dhc96divr/image/upload/v1618628828/Group_153_xsns9x.png'
-                }
-                alt={'Joblytics dashboard'}
-              />
-            </div>
-          </div>
-        </Block>
-      </section>
-      <section className={styles['cta']}>
-        <div className={styles['signup__image-container']}>
-          <img
-            className={styles['signup__image']}
-            width={400}
-            height={400}
-            src={
-              'https://res.cloudinary.com/dhc96divr/image/upload/v1618628829/Group_azro6h.png'
-            }
-            alt={'Joblytics dashboard'}
-          />
-        </div>
-        <div className={styles['signup']}>
-          <h2>{'Join the waitlist'}</h2>
-          <p>{'Stay up to date for when we release our early beta'}</p>
-          <SignUpForm user={{ email: '', firstName: '', lastName: '' }} />
-          <p className={styles['divider']}>{'And'}</p>
-          <Button
-            as={'a'}
-            href={'https://discord.gg/URGCdzfQMM'}
-            className={styles['discord__button']}
-          >
-            <span className={styles['discord__button-wrapper']}>
-              <Icon
-                className={styles['discord__button-icon']}
-                name={'discord'}
-              />
-              {'Join our Discord'}
-            </span>
-          </Button>
-        </div>
-      </section>
-
+      <PlanSection />
+      <ComingSoon />
+      <SignUpSection />
       <footer className={styles['footer']}>
         <p>Joblytics ©2021</p>
         <div>
           <p>
-            All Rights Reserved | <a href={'/'}>Terms and Condition</a> |{' '}
-            <a href={'/'}>Privacy Policy</a>
+            All Rights Reserved | <Link href={'/'}>Terms and Condition</Link> |{' '}
+            <Link href={'/'}>Privacy Policy</Link>
           </p>
         </div>
       </footer>

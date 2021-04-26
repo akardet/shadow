@@ -6,17 +6,17 @@ import styles from './HeroSection.module.scss'
 
 const data = {
   hero: {
-    eyebrow: 'The Premiere',
-    title: 'Platform for early stage career advancement',
+    eyebrow: 'The Smartest',
+    title: 'Platform for Successfully Changing Careers',
     description:
-      'By analyzing real-time market data, Joblytics is designed to help you navigate the tricky landscape of career progressions and get you a leg up in your next job search.',
+      'Joblytics takes the guesswork out of career pivoting. By analyzing real-time market data at scale, Joblytics provides early professionals with a detailed look into their core skills gaps, and a personalized plan for how to close them.',
     buttonText: 'Join the waitlist',
     heroImageUrl:
       'https://res.cloudinary.com/dhc96divr/image/upload/v1618629040/Group_285_g4cn87.png',
   },
   background: {
     blobUrl:
-      'https://res.cloudinary.com/stancharoen/image/upload/v1617568382/red_blob_g5lz8e.png',
+      'https://res.cloudinary.com/dhc96divr/image/upload/v1619449870/full_pill_ddamqm.png',
   },
 }
 
@@ -48,9 +48,16 @@ export const HeroSection = () => {
             width={400}
             height={400}
             src={hero.heroImageUrl}
-            alt={'Joblytics dashboard'}
+            alt={'Joblytics Dashboard'}
           />
         </Block>
+        <img
+          className={styles['background__pill']}
+          width={400}
+          height={400}
+          src={data.background.blobUrl}
+          alt={''}
+        />
       </div>
     </Section>
   )

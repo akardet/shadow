@@ -2,7 +2,8 @@
 
 .hero {
   background-color: var(--jl-orange-1);
-  margin-top: -10rem; // Account for sticky nav
+  margin-top: -11rem; // Account for sticky nav
+  overflow: hidden;
 }
 
 .hero__content {
@@ -15,8 +16,7 @@
   align-items: center;
   grid-template-columns: minmax(40rem, 50rem) minmax(50rem, 70rem);
   justify-content: space-between;
-  padding-bottom: 0rem;
-  margin-bottom: -6rem;
+  padding-bottom: 5rem;
   position: relative;
   z-index: 1;
 
@@ -72,4 +72,17 @@
 .hero__image {
   width: 100%;
   height: auto;
+}
+
+.background__pill {
+  position: absolute;
+  z-index: -1;
+  right: -33rem;
+  top: -24rem;
+  width: 90rem;
+
+  @media #{$sm-device} {
+    right: -12rem;
+    top: -16rem;
+  }
 }

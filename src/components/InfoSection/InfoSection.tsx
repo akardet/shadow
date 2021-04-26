@@ -7,7 +7,7 @@ import styles from './InfoSection.module.scss'
 const data = {
   heading: 'How does it work?',
   description:
-    'A data-driven and cost-effective platform that helps bring the most effective resources together to make you a more effective candidate.',
+    'Joblytics analyzes thousands of job postings every day. By using Natural Language Processing, we are able to get a deep understanding of the skills required to succeed in your goal job. Then, we calculate the optimal set of online courses to close those gaps as quickly and cheaply as possible.',
   tiles: [
     {
       key: 'infoTile-1',
